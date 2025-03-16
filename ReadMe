@@ -16,8 +16,12 @@ k8- tain use == it used for if we want to run some project in specified node we 
                     cmd=kubectl taint nodes <node-name> <key>=<value>:<effect>
 ex--kubectl taint nodes ip-192-168-30-146.ec2.internal hardware=gpu:NoSchedule
 if u want to untaint the nodes just give (-) after the commad
+tolerations:
 NoSchedule: fixed order has to follow
 PreferNoSchedule: Kubernetes will try to stop
 NoExecute: if they are already running on the node it wont stop them but wont allow new one
+it is not 100% guarrenty as it will allow to not run
 
-tolerance=
+affinity: in/notin/exists/doesnotexists/gt/lt
+it will 100% assure the it will apply
+kubectl label nodes 

@@ -1,0 +1,23 @@
+###these for the kube ns knstallation
+to use the network we can use kubens toll
+sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+curl -sS https://webinstall.dev/k9s | bash
+if u give k9s in another tab
+shift:
+press s exec 
+logs l
+esc quit
+
+#####SELECTORS
+k8- tain use == it used for if we want to run some project in specified node we use the taint but it
+                    wont give any guarrenty that wull happend
+                    cmd=kubectl describe nodes
+                    cmd=kubectl taint nodes <node-name> <key>=<value>:<effect>
+ex--kubectl taint nodes ip-192-168-30-146.ec2.internal hardware=gpu:NoSchedule
+if u want to untaint the nodes just give (-) after the commad
+NoSchedule: fixed order has to follow
+PreferNoSchedule: Kubernetes will try to stop
+NoExecute: if they are already running on the node it wont stop them but wont allow new one
+
+tolerance=

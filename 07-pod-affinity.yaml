@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: pod
   labels:
-    app-name:pod
+    app-name: pod
 spec:
   containers:
   - name: with-pod-affinity
@@ -14,7 +14,7 @@ kind: Pod
 metadata:
   name: pod-1
   labels:
-    app-name:pod-1
+    app-name: pod-1
 spec:
   affinity:
       podAffinity:
